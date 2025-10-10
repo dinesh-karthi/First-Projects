@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>heading</h1>
+    <div></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, expedita?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad vitae, optio autem dolores unde explicabo.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <input type="text" placeholder="text me">
+
+    <style>
+        /*  */
+        h1{
+            text-align: center;
+            display: list-item;
+            counter-increment: name;
+        }
+        h1::marker{
+            content: '#' counter(name);
+            
+        }
+        h1::first-letter{
+            color: red;
+            font-size: 50px;
+        }
+        h1::before, h1::after{
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+        }
+      h1::before{
+        border-bottom: 30px solid yellow;
+        top: 70px;
+      }
+      div + p::selection{
+        color: white;
+        background-color: black;
+      }
+      input::placeholder{
+        color: blue;
+      }
+      input::placeholder{
+        color: blue;
+      }
+      input[type]{
+        border-color: red;
+      }
+     
+    </style>
+</body>
+</html>
