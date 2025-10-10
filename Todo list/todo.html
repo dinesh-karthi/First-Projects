@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todostyle.css">
+    <link rel="icon" href="title icon.png">
+</head>
+<body>
+   
+       <div class="textbox">
+         <textarea id="input-text" maxlength="50"></textarea>
+        <button class="btn" onclick="add(event)">Add</button>
+       </div>
+
+       <div class="list-container">
+        <ol id="ordered-list" style="margin-top: 2cqmax;">
+        </ol>
+       </div>
+
+        <script defer>
+            var ol=document.getElementById("ordered-list")
+            var text=document.getElementById("input-text")
+            
+            function add(event){
+                var listitem=document.createElement("li")
+                listitem.innerHTML=text.value +"<button class='btn-delete' onclick='del(event)'>Delete</button>"
+                ol.append(listitem)
+                ol.style.backgroundColor="rgba(255,255,255,0.25)"
+                ol.style.padding="10px"
+            }
+
+            function del(event) {
+                event.target.parentElement.remove()
+            }
+        </script>
+</body>
+</html>
