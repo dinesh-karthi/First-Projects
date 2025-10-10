@@ -5,35 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="todostyle.css">
-    <link rel="icon" href="title icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
 </head>
 <body>
-   
+    <header>
+        <h1>TO-DO-LIST</h1>
+    </header>
+        <div class="todo-container">
        <div class="textbox">
-         <textarea id="input-text" maxlength="50"></textarea>
-        <button class="btn" onclick="add(event)">Add</button>
+         <textarea id="input-text" maxlength="50" placeholder="Add your Task"></textarea><br>
+        <button class="add-btn">Add</button>
+        <button class="clear-btn">Clear</button>
        </div>
 
        <div class="list-container">
-        <ol id="ordered-list" style="margin-top: 2cqmax;">
-        </ol>
+            <!-- <div class="list">
+                <ol>
+                    <li>Task1</li>
+                </ol>
+                <div class="btns">
+                <button class="edit"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
+                <button class="remove"><i class="fa-solid fa-trash"></i>Delete</button>
+                </div> -->
+             </div>
        </div>
-
-        <script defer>
-            var ol=document.getElementById("ordered-list")
-            var text=document.getElementById("input-text")
-            
-            function add(event){
-                var listitem=document.createElement("li")
-                listitem.innerHTML=text.value +"<button class='btn-delete' onclick='del(event)'>Delete</button>"
-                ol.append(listitem)
-                ol.style.backgroundColor="rgba(255,255,255,0.25)"
-                ol.style.padding="10px"
-            }
-
-            function del(event) {
-                event.target.parentElement.remove()
-            }
-        </script>
+    </div>
 </body>
 </html>

@@ -1,92 +1,95 @@
-html{
-    background: linear-gradient(to right,red,green,yellow, orange, purple);
-    background-position: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+}
+header h1{
+    text-shadow: 0 0 10px aqua;
+    text-align: center;
+}
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
 }
 .textbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
+    padding: 1.5rem;
+    width:  70%;
 }
-@media screen and (max-width:600px) {
-    .textbox{
-        width: 500px;
-    }
-    
-}
-#input-text{
-   background-color: rgb(228, 227, 227);
+.textbox textarea{
+    width: 100%;
+    background-color: rgba(228, 227, 227,0.5);
    font-size: 20px;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   margin: 20px;
-   padding: 10px;
-   width: 30%;
-   height: 100px;
+   padding: 0.8rem;
+   width: 100%;
+   height: 3rem;
    border-radius: 5px;
-   border: solid gray ;
-   border-top: none;
-   border-left: none;
-   border-right: none;
-   border-bottom: solid rgb(85, 80, 80) 2px;
+   border: 0.2px solid gray ;
    resize: none;
 }
-#input-text:focus {
-    outline: none;
-    border-bottom-color: aqua ;
-    animation-name: example;
-    border-bottom-width: 10px;
-    transition-timing-function: ease-in-out;
-    animation-duration: 5s;
-}
-@keyframes example {
-    0%{
-        background-color: red;
-        left: 0px;
-    }
-    25%{
-        background-color: black;
-        left: 10%;
-    }
-    50%{
-        background-color: yellow;
-       left: 20%;
-    }
-    100%{
-        background-color: blue;
-        left: 30%;
-    }
-}
-#input-text:hover{
-    border-bottom-color: red;
-    transition: bottom 3s;
-}
-    
 
-.btn{
-    width: 100px;
-    height: 50px;
-    background-color: rgb(42, 72, 238);
+textarea:focus {
+    border: none;
+    outline: none;
+    background-color: rgba(228, 227, 227);
+}
+
+.add-btn , .clear-btn{
+    padding: 0.7rem 2rem;
     color: white;
     border-radius: 20px;
-    border-color: aqua;
     font-weight: bolder;
     cursor: pointer;
 }
+.add-btn{
+    background-color: rgb(42, 72, 238);
+     border-color: aqua;
+}
+.clear-btn{
+    background-color: red;
+     border-color: yellow;
+}
+.add-btn:hover,.clear-btn:hover{
+    opacity: 0.8;
+}
 .list-container{
-    margin-left: 50px;
+    align-self: flex-start;
+    margin-left: 16%;
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
+    width: 70%;
 }
-
-.btn-delete{
-    background-color: black;
+.list {
+    display:flex;
+    justify-content: space-between;
+}
+.btns button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+.edit{
+    background-color: green;
     color: white;
-    margin-left: 30px;
-    border-radius: 2px;
-    outline: none;
-    padding: 5px;
-    margin-top: 10px;
+}
+.remove{
+    background-color: red;
+    color: white;
 }
