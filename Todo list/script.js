@@ -69,10 +69,12 @@
         const deletebtn = document.createElement('button');
         deletebtn.innerHTML = '<i class="fa-solid fa-trash"></i>Delete';
         deletebtn.addEventListener('click', function() {
+            if(confirm("Are You Sure yo Delete")){
             listContainer.removeChild(li);
             const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
             const updatedTasks = tasks.filter(task => task.id !== id);
             localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+            }
         }); 
     //    Edit button
     const editBtn = document.createElement('button');
