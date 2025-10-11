@@ -43,10 +43,10 @@
     //         Input.value = '';
     //     }
     // })
-
-    // clrBtn.addEventListener('click', function() {
-    //     Input.value = '';
-    // })
+   // clear input value
+     clrBtn.addEventListener('click', function() {
+        Input.value = '';
+     })
 
     // save task in localStorage
     addBtn.addEventListener('click',function(){
