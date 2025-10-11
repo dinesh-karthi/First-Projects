@@ -71,16 +71,18 @@
         deletebtn.addEventListener('click', function() {
             if(confirm("Are You Sure yo Delete")){
             listContainer.removeChild(li);
-            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-            const updatedTasks = tasks.filter(task => task.id !== id);
-            localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+            removeTask(id);
             }
         }); 
     //    Edit button
     const editBtn = document.createElement('button');
     editBtn.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>Edit';
     editBtn.classList.add('.edit-btn');
-
+    editBtn.addEventListener('click', function (){
+        Input.value = span.textContent
+        li.remove();
+        removeTask(id);
+    });
     li.appendChild(span);
     li.appendChild(deletebtn);
     li.appendChild(editBtn);
@@ -97,3 +99,9 @@
         const savedTask = JSON.parse(localStorage.getItem('tasks')) || [];
         savedTask.forEach(task => addTask(task.text,task.id));
     }
+
+        function removeTask(id){
+             const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const updatedTasks = tasks.filter(task => task.id !== id);
+            localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+        }
