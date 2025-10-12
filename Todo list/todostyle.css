@@ -15,6 +15,15 @@ header {
 header h1{
     text-shadow: 0 0 10px aqua;
     text-align: center;
+    animation: neon 1s linear 3 ;
+}
+@keyframes neon {
+    from{
+        text-shadow: 0 0 1px aqua;
+    }
+    to{
+        text-shadow: 0 0 15px  yellowgreen;
+    }
 }
 .todo-container{
     display: flex;
@@ -25,8 +34,7 @@ header h1{
     height: 100%;
 }
 .textbox{
-    padding: 1.5rem;
-    width:  70%;
+    width:  80%;
 }
 .textbox textarea{
     width: 100%;
@@ -48,7 +56,7 @@ textarea:focus {
 }
 
 .add-btn , .clear-btn{
-    padding: 0.7rem 2rem;
+    padding: 0.7rem 1.2rem;
     color: white;
     border-radius: 20px;
     font-weight: bolder;
@@ -56,40 +64,125 @@ textarea:focus {
 }
 .add-btn{
     background-color: rgb(42, 72, 238);
-     border-color: aqua;
+     border: none;
 }
 .clear-btn{
     background-color: red;
-     border-color: yellow;
+     border: none;
 }
 .add-btn:hover,.clear-btn:hover{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .list-container{
-    align-self: flex-start;
-    margin-left: 16%;
-    padding: 10px;
     font-size: 20px;
     font-weight: bold;
-    width: 70%;
+    width: 80%;
+    margin-top: 1rem;
 }
 .list {
     display:flex;
+    justify-content: space-around;
+}
+
+/* styles from js elements */
+li{
+    display: flex;
+    background-color: rgb(250, 212, 212);
+    justify-content: space-between;
+    align-items: center;
+    height: clamp(3rem,1rem,3rem);
+    padding: 0.5rem;
+    margin-bottom: 0.1rem;
+}
+li button{
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 5rem;
+    cursor: pointer;
+}
+li .delete{
+    background-color: red;
+    padding-left:  0;
+    padding-right: 0;
+    width: 5rem;
+}
+li .edit{
+    background-color: rgb(161, 218, 49);
+    font-weight: 700;
+}
+li::marker{
+    color: red;
+}
+.btn-box{
+    width: 40%;
+    display: flex;
     justify-content: space-between;
 }
-.btns button{
-    margin-left: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    border: none;
+::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 10px;
+    height: 30px;
+    width: 5px;
 }
-.edit{
-    background-color: green;
-    color: white;
+::-webkit-scrollbar-track{
+    background: red;
 }
-.remove{
-    background-color: red;
-    color: white;
+::-webkit-scrollbar-button{
+    background: red;
+}
+::-webkit-scrollbar-track-piece{
+    background: red;
+}
+
+/* media query for tablets  */
+@media (min-width:481px) and (max-width:758px){
+    body{
+        overflow-x: hidden;
+    }
+     li span{
+        font-size: 1.2rem;
+        font-weight: 500;
+     }
+     .add-btn{
+        margin-left: 10px;
+     }
+     .btn-box{
+        width: 35%;
+     }    
+}
+
+/* for mobile screens */
+@media (min-width:320px) and (max-width:480px){
+    body{
+        overflow-x: hidden;
+    }
+    .textbox{
+        width:  100%;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .textbox textarea{
+        width: 90%;
+        margin-left: 5px;
+    }
+     li span{
+        font-size: 1.2rem;
+        font-weight: 500;
+     } 
+     .list-container{
+        width: 95%;
+     } 
+     .add-btn{
+        margin-left: 10px;
+     }
+     .btn-box{
+    width: 40%;
+    }
+    .edit,.delete{
+        padding: 0;
+        width: fit-content;
+        height: 2.2rem;
+    }   
 }
