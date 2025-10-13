@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+html{
+    scrollbar-width: small;
+    scroll-behavior: smooth;
+}
 body{
     width: 100vw;
     height: 100vh;
@@ -51,10 +55,15 @@ nav input{
     transition: 0.5s;
     width: 30rem;
     border-radius: 5px;
+    text-align: left;
 }
 nav input:focus{
     border: 1px solid aqua;
     border-radius: 25px;
+}
+nav input::placeholder{
+    text-align: end;
+    padding-right: 10px;
 }
 header{
     height: 35rem;
@@ -81,19 +90,19 @@ header button{
     transition: 0.3s; 
 }
 header button:hover{
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 1rem;
     text-transform: uppercase;
     color: black;
-    background-color :greenyellow;
-    outline: 2px solid white;
+    background-color :white;
+    outline: 2px solid grey;
 }
 
 /* collections styling */
 .title{
-    padding: 20px;
+    max-height: 4rem;
+    padding: 1rem;
     display: flex;
-    gap: 0 10px;
+    gap: 10px;
     background-color: lightcoral;
 }
 .title strong{
@@ -122,6 +131,7 @@ header button:hover{
 }
 .img-box img{
     width: 100%;
+    cursor: pointer;
 }
 .img-box{
     width: 220px;
@@ -177,6 +187,9 @@ footer h1{
 /* responsive for mobiles*/
 @media (min-width:320px) and (max-width:480px){
 
+ ::-webkit-scrollbar{
+    display: none;
+}
 body{
     overflow-x: hidden;
 }
@@ -195,8 +208,7 @@ nav input{
     padding:10px 0;
     border: 1px solid gray;
     outline: none;
-    transition: 0.5s;
-    width: 20rem;
+    width: 100%;
     border-radius: 5px;
     text-align: end;
 }
@@ -220,71 +232,109 @@ header button:hover{
 }
 
 .title{
-    padding: 20px 10px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 2rem;
+    padding-bottom: 10px;
+    gap: 1rem;
     width: 100%;
+    height: max-content;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     border-bottom: 0.5px solid grey;
 }
 .title strong{
     padding: 5px 0;
     transition: 0.3s;
     cursor: pointer;
+    text-wrap: nowrap;
 }
 .collections{
     padding: 1rem;
-    gap: rem ;
     box-sizing: border-box;
+    
+}
+
+.img-box{
+    height: auto;
+    width: 100%;
+    background-color: red;
+    position: relative;
 }
 .img-box img{
-    width: 100%;
-    height: 220px;
-    aspect-ratio: 1/1;
-}
-.img-box{
     width: auto;
-    height: 20rem;
-    flex-basis: 90%;
-    border-radius: 5px;
-    transition: 0.3s;
-    box-shadow: rgba(60, 52, 59, 0.7) 0px 2px 5px -5px ,rgba(60, 52, 59, 0.7) 0px 2px 3px 0.5px;
+    height: 100%;
 }
 .order{
-    display: flex;
-    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    width: 36.5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.order{
     gap: 8px 0;
     padding: 0 7px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 .order button{
-    border: none;
-    width: 4.5rem;
-    font-size: 0.8rem;
-    text-wrap: nowrap;
-    padding: 5px;
+   position: static;
 }
 }
 
 /* media query for tablets */
 
 @media (min-width:480px) and (max-width:800px){
-
+::-webkit-scrollbar{
+    display: none;
+}
 body{
     overflow-x: hidden;
 }
+header{
+    background-size: contain;
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(173, 224, 233);
+    background-position: left;
+}
 nav{
-    display: flex;
+    padding: 0.7rem 0;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
+    gap: 0.8rem;
     text-align: center;
+    height: fit-content;
+
 }
 nav input{
     outline: none;
-    width: 10rem;
-  
+    width: 90%;
+    text-align: left;
+    padding: 0.5rem;
+    margin: 0;
+    height: 2rem;
 }
-
-
+.collections{
+    padding:  1rem ;
+    display: flex;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    background-color: rgb(245, 191, 191);
+    overflow: scroll;
+}
+.img-box{
+    height: max-content;
+    flex-basis: 40%;
+    width: 40%;
+    position: relative;
+}
+.img-box img{
+    height: 100%;
+}
 
 }
