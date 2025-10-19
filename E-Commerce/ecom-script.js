@@ -10,12 +10,32 @@ function dropNavSide(){
 }
 //selecting navbar elements
 const input = document.getElementById('nav-input')
-const autoAnchor = document.querySelectorAll('.drop a')
+const autoAnchor = document.querySelector('.drop ul ')
+const dropList = document.createElement('li')
+const autoAnchorLinks = document.createElement('a');
+    dropList.appendChild(autoAnchorLinks)
+    autoAnchor.appendChild(dropList)
+
+// left arrow detect  
+input.addEventListener('keydown',leftarrowDetect)
+
+function leftarrowDetect(event){
+    var key = event.key;
+    console.log(key);
+    if( key == 'ArrowRight' ){
+        autoAnchorLinks.textContent = input.value
+        alert("Left arrow key is pressed");
+    }
+
+    else if( key == 'Enter' ){
+        storeValue(event);
+}
+}
 
 function storeValue(event){
 var key = event.key;
 if( key == 'Enter' ){
-    autoAnchor[0].textContent = input.value
+    autoAnchorLinks.textContent = input.value
 }
 
 }
