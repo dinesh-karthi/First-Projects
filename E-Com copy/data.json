@@ -1,0 +1,166 @@
+{
+"Clothing":[
+    {
+        "src": "https://picsum.photos/id/11/220/220"
+    }
+     , 
+     {
+        "src": "https://picsum.photos/id/12/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/13/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/14/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/15/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/16/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/17/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/18/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/19/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/20/220/220"
+    }
+],
+"Accesories":[
+    {
+        "src": "https://picsum.photos/id/1/220/220"
+    }
+     , 
+     {
+        "src": "https://picsum.photos/id/2/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/3/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/4/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/5/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/6/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/7/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/8/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/9/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/10/220/220"
+    }
+],
+"HomeAppliances":[
+    {
+        "src": "https://picsum.photos/id/21/220/220"
+    }
+     , 
+     {
+        "src": "https://picsum.photos/id/22/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/23/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/24/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/25/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/26/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/27/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/28/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/29/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/30/220/220"
+    }
+]
+,"Sale":[
+    {
+        "src": "https://picsum.photos/id/31/220/220"
+    }
+     , 
+     {
+        "src": "https://picsum.photos/id/32/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/33/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/34/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/35/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/36/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/37/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/38/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/39/220/220"
+    }
+    ,
+    {
+        "src": "https://picsum.photos/id/40/220/220"
+    }
+]
+}
