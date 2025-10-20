@@ -13,19 +13,23 @@ body{
     height: 100vh;
     overflow-x: hidden;
 }
+:root{
+    --anchor-bg : #dfe6e9;
+}
 /* styling */
 nav{
     display: flex;
     align-items: center;
     padding: 10px;
     justify-content: space-around;
+    background-color: lightcoral;
     box-shadow: rgba(60, 52, 59, 0.7) 0px 0px 2px 1px;
     border: none;
     width: 100%;
 }
 nav h1{
     font-size: 30px;
-    color: hotpink;
+    color: #81ecec;
 }
 nav ul{
     padding: 0 0.5rem;
@@ -46,8 +50,7 @@ nav li a{
     color: black;
 }
 nav li a:hover{
-    background-color: gray;
-    color: white;
+    background-color: var(--anchor-bg);
     border-radius: 5px ;
 }
  
@@ -93,7 +96,6 @@ nav menu a{
             flex-direction: column;
         }
         .drop li{
-            display: block;
             margin: 0;
             padding: 0;
         }
@@ -106,13 +108,27 @@ nav menu a{
             border-radius: 0;
         }
 
-        .drop ul li a:hover {
+        .drop ul li:hover {
             background-color: rgb(204, 203, 202);
             color: black;
         }
-
+        .input-box input:focus{
+            border-bottom: none;
+        }
         .input-box input:focus ~ .nav-content {
             max-height: 300px;
+        }
+        .drop-li{
+            display: flex;
+            justify-content: space-between;
+          
+        }
+        .drop-li button{
+            background-color: lightgray;
+            border: none;
+            width: 20px;
+            height: 30px;
+            cursor: pointer;
         }
 
  /* end  */
@@ -229,6 +245,7 @@ header button:hover{
 .img-box img{
     width: 100%;
     cursor: pointer;
+    aspect-ratio: 1/1;
 }
 .img-box{
     width: 220px;
@@ -268,6 +285,7 @@ footer{
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 footer h1{

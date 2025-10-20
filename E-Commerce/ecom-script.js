@@ -23,9 +23,9 @@ function leftarrowDetect(event){
     var key = event.key;
     console.log(key);
     if( key == 'ArrowRight' ){
-        autoAnchorLinks.textContent = input.value
-        alert("Left arrow key is pressed");
-    }
+    
+           autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button> X </button></li>`
+        }
 
     else if( key == 'Enter' ){
         storeValue(event);
@@ -35,7 +35,7 @@ function leftarrowDetect(event){
 function storeValue(event){
 var key = event.key;
 if( key == 'Enter' ){
-    autoAnchorLinks.textContent = input.value
+       autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button> X </button></li>`
 }
 
 }
