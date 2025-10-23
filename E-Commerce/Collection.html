@@ -1,84 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>www.collections.com/page-explore</title>
-    <link rel="stylesheet" href="css/collection.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="/bootstrap-5.0.2/bootstrap-5.0.2/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>www.collections.com/page-explore</title>
+  <link rel="stylesheet" href="css/collection.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="js/collection.js" defer></script>
+  <!-- <base href="images /mens"> -->
 </head>
+
 <body>
-    <h1 class="text-center text-primary">Collections</h1>
-    <div class="collection-container bg-light p-4">
-        
-        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary 5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active rounded-3" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Mens</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-3" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Female</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-3" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Kids</button>
-  </li>
-</ul>
-<!-- search  -->
-    <div class="form-group m-3">
-        <input type="text" class="form-control" id="searchInput" placeholder="Search Collections...">
+  <h1 class="text-center text-primary">Collections</h1>
+  <div class="collection-container bg-light p-4">
+    
+    <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary 5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active rounded-3" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Mens</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-3" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Female</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-3" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Kids</button>
+      </li>
+    </ul>
+    <!-- search  -->
+    <div class="form-group mt-3">
+      <input type="text" class="form-control" id="searchInput" placeholder="Search Collections...">
     </div>
-<!-- collection carousel -->
- <div id="carouselExampleFade" class="carousel slide carousel-fade ">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="d-block w-100 bg-dark img">
-        
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div src="..." class="d-block w-100 bg-danger img d-flex flex-wrap justify-content-between gap-3 p-3">
-        <div class="img-box">
-                    <img src="https://picsum.photos/220/220?random/television" alt="">
-         </div>
-
-         <div class="img-box">
-                    <img src="https://picsum.photos/220/220?random/television" alt="">
-         </div>
-
-         <div class="img-box">
-                    <img src="https://picsum.photos/220/220?random/television" alt="">
+    <!-- collection carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade ">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- mens collection -->
+    <div class="d-block w-100 d-flex gap-3 p-3 justify-content-between flex-column img">
+            <div class="img-box">
+              <img src="images /mens/men01.jpg" alt="">
+            </div>
+      <div class="img-box">
+              <img src="images /mens/men02.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men03.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men04.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men05.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men06.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men07.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men08.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men09.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men10.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men11.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men12.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men13.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men14.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images/mens/men15.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /mens/men16.jpg" alt="">
+            </div>
+            
+          </div>
         </div>
-
-        <div class="img-box">
-                    <img src="https://picsum.photos/220/220?random/television" alt="">
-         </div>
-
-         <div class="img-box">
-                    <img src="https://picsum.photos/220/220?random/television" alt="">
-         </div>
-        
+        <!-- women's collection -->
+   <div class="carousel-item">
+        <div class="d-block w-100 img d-flex flex-wrap justify-content-between gap-3 p-3">
+            <div class="img-box">
+              <img src="images /women /women1.jpg" alt="women">
+            </div>
+            
+            <div class="img-box">
+              <img src=" images /women /women2.jpg" alt="">
+            </div>
+            
+            <div class="img-box">
+              <img src="images /women /women3.jpg" alt="">
+            </div>
+            
+            <div class="img-box">
+              <img src="images /women /women4.jpg" alt="">
+            </div>
+            
+            <div class="img-box">
+              <img src="images /women /women5.jpg">
+            </div>
+            
+            <div class="img-box">
+              <img src="images /women /women6.jpg">
+            </div>
+            
+            <div class="img-box">
+              <img src="images /women /women7.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- kids collection -->
+        <div class="carousel-item">
+          <div src="..." class="d-block w-100  img">
+            <div class="img-box">
+              <img src="images /kids/kid01.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid02.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid03.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid04.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid05.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid06.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid07.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid08.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid09.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid10.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid11.jpg" alt="">
+            </div>
+            <div class="img-box">
+              <img src="images /kids/kid12.jpg" alt="">
+            </div>
+            
+          </div>
+        </div>
       </div>
+      <button class="carousel-control-prev bg-dark" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next bg-dark" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <div src="..." class="d-block w-100 bg-success img"> </div>
-    </div>
+    
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-        <!--  -->
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <script src="/bootstrap-5.0.2/bootstrap-5.0.2/dist/js/bootstrap.min.js"></script>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
 </body>
+
 </html>
