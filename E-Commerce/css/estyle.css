@@ -1,8 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 html{
     scrollbar-width: small;
@@ -12,7 +10,11 @@ body{
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }
+
 :root{
     --anchor-bg : #dfe6e9;
 }
@@ -205,7 +207,7 @@ header button:hover{
     text-transform: uppercase;
     color: black;
     background-color :white;
-    outline: 2px solid grey;
+    outline: 2px solid rgb(50, 98, 235);
 }
 
 /* collections styling */
@@ -217,7 +219,8 @@ header button:hover{
     background-color: lightcoral;
 }
 .title a:nth-child(1){
-    pointer-events: none;
+   
+    cursor: not-allowed;
 }
 .title a{   
     padding: 8px 15px;
@@ -304,6 +307,7 @@ footer h1{
 
  ::-webkit-scrollbar{
     display: none;
+    -ms-overflow-style: none;
 }
 body{
     overflow-x: hidden;
@@ -333,9 +337,11 @@ nav .bar{
     width: 90%;
     background-color: black;
     border-bottom: 1px solid white;
-    translate: 8% 70%;
+    transform: translate(7%,60%);
+    transition: all 0.5s;
 }
-nav .bar:hover > span{
+nav .bar:hover {
+     background-color: #81ecec;
      border: 1px solid white;
 }
 nav input{
@@ -381,11 +387,12 @@ nav .bar:hover + .sidebar a{
 .sidebar {
             position: absolute;
             top: 8%;
-            overflow-y: scroll;
+            left: 0;
+            overflow: hidden;
             background-color: lightcoral;
             min-width: 100%;
             max-height: 0;
-            transition: 0.5s;
+            transition: all 0.5s;
             z-index: 1;
         }
 
@@ -415,10 +422,12 @@ nav .bar:hover + .sidebar a{
             background-color: rgb(204, 203, 202);
             color: black;
         }
-
-         .sidebar-drop {
+    /* .bar:focus + .sidebar-drop{
             max-height: 300px;
-        }
+    } */
+     .sidebar.sidebar-drop{
+            max-height: 300px;
+    } 
        
 header{
     height: 10rem;

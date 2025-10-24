@@ -1,19 +1,49 @@
-const navBtns = document.querySelectorAll('.nav-item button')
-const input = document.querySelectorAll('.form-group input')
+const AllBtn = document.querySelectorAll('button')[0]
+const MaleBtn = document.querySelectorAll('button')[1]
+const FemaleBtn = document.querySelectorAll('button')[2]
+const KidsBtn = document.querySelectorAll('button')[3]
 
-const carousel = document.querySelectorAll('.carousel-item')
-console.log(carousel[1])
-for (var i = 0; i < navBtns.length; i++) {
+//selecting collection items
+const collectionItems = document.querySelectorAll('.collection-items')
+//male collections
+MaleBtn.addEventListener('click',()=>{
+    collectionItems.forEach((item)=>{
+        if(item.textContent.includes('Mens')){
+            item.style.display = 'block'
+        }else{
+            item.style.display = 'none'
+        }
+    })
+    }  
+)
+//female collections
+FemaleBtn.addEventListener('click',()=>{
+    collectionItems.forEach((item)=>{
+        if(item.textContent.includes('Womens')){
+            item.style.display = 'block'
+        }else{
+            item.style.display = 'none'
+        }
+    })
+    }  
+)
 
-}
-navBtns[1].addEventListener('click', function(){
- carousel[1].classList.toogle
- ('active')
-})
+//kids collection
+KidsBtn.addEventListener('click',()=>{
+    collectionItems.forEach((item)=>{
+        if(item.textContent.includes('Kids')){
+            item.style.display = 'block'
+        }else{
+            item.style.display = 'none'
+        }
+    })
+    }  
+)
 
-navBtns[2].addEventListener('click', function(){
- carousel[2].classList.add('active')
-})
-
-setTimeout(carousel[1].classList.remove('active'),1000)
-
+//all collections
+AllBtn.addEventListener('click',()=>{
+    collectionItems.forEach((item)=>{
+            item.style.display = 'block'
+    })
+    }  
+)

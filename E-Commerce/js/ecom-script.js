@@ -1,3 +1,11 @@
+// collection page location 
+const ExploreBtn = document.querySelector('.explorebtn')
+
+ExploreBtn.addEventListener('click',function(){
+    window.location.href = 'Collection.html'
+
+})
+
 // selecting bar, sidebar
 const bar = document.querySelector('.bar')
 const sidebar = document.querySelector('.sidebar')
@@ -5,9 +13,17 @@ const sidebar = document.querySelector('.sidebar')
 bar.addEventListener('click',dropNavSide)
 
 function dropNavSide(){
-    sidebar.classList.add('sidebar-drop')
-  
+   
+if(sidebar.className === "sidebar"){
+    sidebar.className +=" "+"sidebar-drop"
 }
+else {
+    sidebar.className = "sidebar"
+}
+}
+// remove class contains sidenav value
+
+  
 //selecting navbar elements
 const input = document.getElementById('nav-input')
 const autoAnchor = document.querySelector('.drop ul ')
