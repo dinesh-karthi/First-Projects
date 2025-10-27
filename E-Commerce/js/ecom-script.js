@@ -15,7 +15,7 @@ bar.addEventListener('click',dropNavSide)
 function dropNavSide(){
    
 if(sidebar.className === "sidebar"){
-    sidebar.className +=" "+"sidebar-drop"
+    sidebar.className += " " + "sidebar-drop"
 }
 else {
     sidebar.className = "sidebar"
@@ -26,11 +26,11 @@ else {
   
 //selecting navbar elements
 const input = document.getElementById('nav-input')
-const autoAnchor = document.querySelector('.drop ul ')
-const dropList = document.createElement('li')
-const autoAnchorLinks = document.createElement('a');
-    dropList.appendChild(autoAnchorLinks)
-    autoAnchor.appendChild(dropList)
+const autoAnchor = document.querySelector('.drop')
+// const dropList = document.createElement('li')
+// const autoAnchorLinks = document.createElement('a');
+//     dropList.appendChild(autoAnchorLinks)
+//     autoAnchor.appendChild(dropList)
 
 // left arrow detect  
 input.addEventListener('keydown',leftarrowDetect)
@@ -40,18 +40,24 @@ function leftarrowDetect(event){
     console.log(key);
     if( key == 'ArrowRight' ){
     
-           autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button> X </button></li>`
+           autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button id="delete"> X </button></li>`
+        
+
         }
 
     else if( key == 'Enter' ){
         storeValue(event);
 }
 }
+ const Xbutton = document.getElementById('delete')   
+     
 
 function storeValue(event){
 var key = event.key;
 if( key == 'Enter' ){
-       autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button> X </button></li>`
+       autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button onclick="this.parentElement.parentElement.remove()"> X </button></li>`
+
+      
 }
 
 }
