@@ -60,7 +60,7 @@
     buttons.appendChild(editBtn);
     buttons.appendChild(deletebtn);
     listContainer.appendChild(li);
-    }
+    
 // save task to localstorage
     function saveTask(text,id){
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -87,4 +87,5 @@
             const updatedTasks = tasks.filter(task => task.id !== id);
             localStorage.setItem('tasks', JSON.stringify(updatedTasks));
         }
->>>>>>> 803c2b5697e44043d97c5e34b2facce8e0b6821e
+
+})}
