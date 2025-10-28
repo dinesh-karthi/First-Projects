@@ -2,7 +2,7 @@ const express = require("express");
 const mysql = require("mysql")
 const bodyparse = require("body-parser")
 
-// dotenv.config();
+dotenv.config();
 const port = process.env.PORT || 3000;
 const app = express();
 
@@ -26,7 +26,6 @@ const connect = mysql.createPool({
   user     : process.env.DB_USER,
   password : process.env.DB_PASSWORD,
   database : process.env.DB_DATABASE
-
 })
 
 connect.getConnection((err,connection)=>{
@@ -34,3 +33,13 @@ connect.getConnection((err,connection)=>{
   console.log('connection successful',connection.threadId)
   
 })
+
+// get data from mysql
+connect.query('SELECT * FROM customer',(err,rows)=>{
+  if(!err){
+    console.log(rows)
+  }else{
+    console.log(err)
+  }
+}
+)

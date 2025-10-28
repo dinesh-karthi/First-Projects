@@ -10,15 +10,29 @@ ExploreBtn.addEventListener('click',function(){
 const bar = document.querySelector('.bar')
 const sidebar = document.querySelector('.sidebar')
 
-bar.addEventListener('click',dropNavSide)
-
+bar.addEventListener('click',dropNavSide,true)
+//selecting bars 
+const bars = document.querySelectorAll('.bar span')
 function dropNavSide(){
    
-if(sidebar.className === "sidebar"){
+if(sidebar.className === "sidebar" ){
     sidebar.className += " " + "sidebar-drop"
+
 }
 else {
     sidebar.className = "sidebar"
+   
+}
+// bars
+if( bars[0].className === "bar1" || bars[1].className === "bar2" || bars[2].className === "bar3"){
+    bars[0].className += " " + 'topbar'
+    bars[1].className += " " + 'hide'
+    bars[2].className += " " + 'bottombar'
+}
+else{
+     bars[0].className = "bar1"
+    bars[1].className = "bar2"
+    bars[2].className = "bar3"
 }
 }
 // remove class contains sidenav value
@@ -65,6 +79,7 @@ const Sale = document.querySelectorAll('.img-box img');
 
 //  imgBox[0].src = "https://picsum.photos/id/4/220/220";
 
+// clothing collections
     title[1].addEventListener('click',(e)=>{
         e.preventDefault();
         const api = fetch('data.json');
