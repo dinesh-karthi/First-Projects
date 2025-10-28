@@ -32,35 +32,25 @@ const autoAnchor = document.querySelector('.drop')
 //     dropList.appendChild(autoAnchorLinks)
 //     autoAnchor.appendChild(dropList)
 
-// left arrow detect  
+// left arrow andd Enter key detect  
 input.addEventListener('keydown',leftarrowDetect)
 
 function leftarrowDetect(event){
-    var key = event.key;
+    const key = event.key;
     console.log(key);
-    if( key == 'ArrowRight' ){
+    if( key == 'ArrowRight' || key == 'Enter' ){
     
-           autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button id="delete"> X </button></li>`
-        
-
+           autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button> X </button></li>`
+    
         }
 
-    else if( key == 'Enter' ){
-        storeValue(event);
-}
-}
- const Xbutton = document.getElementById('delete')   
-     
+}     
 
-function storeValue(event){
-var key = event.key;
-if( key == 'Enter' ){
-       autoAnchor.innerHTML += `<li class="drop-li"><a href="#">${input.value}</a> <button onclick="this.parentElement.parentElement.remove()"> X </button></li>`
-
-      
-}
-
-}
+// // selecting X button
+//  const Xbutton = document.querySelectorAll('.delete')   
+// Xbutton.addEventListener('click',function(){
+//     Xbutton.remove();
+// })
 
 
 
@@ -87,7 +77,7 @@ const Sale = document.querySelectorAll('.img-box img');
             }
         })})
         .catch((err)=>{console.log(err);})
-        return i;
+        return;
     });
 // Accesories
  title[2].addEventListener('click',(e)=>{

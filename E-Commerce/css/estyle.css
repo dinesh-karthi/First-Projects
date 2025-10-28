@@ -57,12 +57,11 @@ nav li a:hover{
 }
  
 nav .input-box input{
-    padding:10px;
-    margin-right: 30px;
+    padding: 10px;
     border: 1px solid gray;
     outline: none;
     transition: 0.5s;
-    width: 100%;
+    width: 97.5%;
     border-radius: 5px;
     text-align: left;
 }
@@ -71,7 +70,7 @@ nav input:focus{
     border-bottom-right-radius: 0;
 }
 nav input::placeholder{
-    text-align: end;
+    text-align: start;
     padding-right: 10px;
 }
 nav .input-box {
@@ -86,11 +85,12 @@ nav menu a{
 .nav-content {
             position: absolute;
             top: 100%;
+            left: 0;
             overflow-y: scroll;
             background-color: white;
             width: 100%;
-            max-height: 0;
-            transition: 0.5s;
+            max-height: 300px;
+            transition: all  0.5s;
         }
 
         .drop {
@@ -432,7 +432,7 @@ nav .bar:hover + .sidebar a{
 header{
     height: 10rem;
     background-size: contain;
-    background-position: left 0;
+    background-position: left ;
     background-color: lightblue;
     padding: 20px;
     justify-content: flex-end;
@@ -540,11 +540,10 @@ nav .input-box input::placeholder{
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: rgb(180, 28, 28);
             min-width: 90%;
             max-height: 0px;
             transition: 0.5s;
-            overflow: hidden;
+            overflow-y: scroll;
         }
 
         .drop ul {
@@ -575,7 +574,7 @@ nav .input-box input::placeholder{
             border-bottom: none;
         }
         .input-box input:focus ~ .nav-content {
-            max-height: 10rem;
+            max-height: 250px;
         }
 nav ul{
     display: flex;
